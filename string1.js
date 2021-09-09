@@ -66,6 +66,7 @@ const dedupe = (str) => {
             }
         }
         if(counter == 0){
+            // newString += str[i];
             newString += str[i];
         }
     }
@@ -75,3 +76,54 @@ const dedupe = (str) => {
 console.log(dedupe("Snaps! crackles! pops!"));
 console.log(dedupe("Did I shine my shoes today?"));
 console.log(dedupe("scoop dedupe!"));
+
+
+
+
+// const dedupe = (str) => {
+    
+//     let letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",".","!","?"," "]
+//     /* This one does the FIRST instance of each letter in order, not the last */
+//     /* let newStr = ""
+//     for (let i = 0; i < str.length; i++) {
+//         const I = str[i];
+//         for (let j = 0; j < letters.length; j++) {
+//             const J = letters[j];
+//             if (I == J ) {
+//                 newStr+=I
+//                 letters[j] = null
+//                 console.log(newStr)
+//             }
+//         }
+//     }
+//     return newStr
+// } */
+
+// /* THIS is the correct version */
+//     let newStr = ""
+//     for (let i = str.length; i > -1; i--) {
+//         const I = str[i];
+//         for (let j = 0; j < letters.length; j++) {
+//             const J = letters[j];
+//             if (I == J ) {
+//                 newStr+=I
+//                 letters[j] = null
+//                 console.log(newStr)
+//             }
+//         }
+//     }
+
+//     let revStr = ""
+//     for (let k = newStr.length-1; k >-1; k--) {
+//         const element = newStr[k];
+//         revStr+=element
+//     }
+
+//     return revStr
+// }
+// console.log(dedupe("Snaps! crackles! pops!"));
+// console.log(dedupe("Did I shine my shoes today?"));
+// console.log(dedupe("scoop dedupe!"));
+
+
+
