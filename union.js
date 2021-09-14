@@ -73,3 +73,33 @@
 
 
 
+    const union = (arrLeft, arrRight) => {
+        let lefti = 0;
+        let righti = 0;
+        let results = [];
+    
+        while(lefti < arrLeft.length && righti < arrRight.length){
+            if(arrLeft[lefti] === arrRight[righti]){
+                results.push(arrLeft[lefti]);
+                lefti++;
+                righti++;
+            }
+            else if(arrLeft[lefti] < arrRight[righti]){
+                results.push(arrLeft[lefti]);
+                lefti++;
+    
+            }
+            else{
+                results.push(arrRight[righti]);
+                righti++;
+    
+            }
+        }
+    
+    
+        return results;
+    }
+    
+    // console.log(union([2,4,7,9,10],[2,3,5,7,9,10]));
+    console.log(union([1,2,2,2,7],[2,2,6,6,7]));
+    // console.log(union([1,5,9],[2,6,10]))
